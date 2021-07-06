@@ -1,0 +1,48 @@
+﻿@model Cu_University.Models.Student
+
+@{
+    ViewBag.Title = "Deletar";
+}
+
+<h2>Deletar</h2>
+
+<h3>Tem certeza que deseja deletar o estudante?</h3>
+<div>
+    <h4>Student</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Sobrenome
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            Nome
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstMidName)
+        </dd>
+
+        <dt>
+            Data de Inscrição
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnrollmentDate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Deletar" class="btn btn-default" /> |
+            @Html.ActionLink("Voltar à Lista", "Index")
+        </div>
+    }
+</div>

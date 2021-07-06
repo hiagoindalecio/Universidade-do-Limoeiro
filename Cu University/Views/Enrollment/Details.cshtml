@@ -1,0 +1,42 @@
+﻿@model Cu_University.Models.Student
+
+@{
+    ViewBag.Title = "Detalhes";
+}
+
+<h2>Detalhes</h2>
+
+<div>
+    <h4>Estudante</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Sobrenome
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LastName)
+        </dd>
+
+        <dt>
+            Nome
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.FirstMidName)
+        </dd>
+
+        <dt>
+            Data de Inscrição
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EnrollmentDate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Voltar à Lista", "Index")
+</p>

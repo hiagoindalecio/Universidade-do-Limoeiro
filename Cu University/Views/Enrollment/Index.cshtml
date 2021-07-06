@@ -1,0 +1,39 @@
+﻿@model IEnumerable<Cu_University.Models.Course>
+
+@{
+    ViewBag.Title = "Índice";
+}
+
+<h2>Índice</h2>
+
+<p>
+    @Html.ActionLink("Criar Novo", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            Título
+        </th>
+        <th>
+            Créditos
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(model => item.Title)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Credits)
+        </td>
+        <td>
+            @Html.ActionLink("Editar", "Edit", new { id=item.CourseID }) |
+            @Html.ActionLink("Detalhes", "Details", new { id=item.CourseID }) |
+            @Html.ActionLink("Deletar", "Delete", new { id=item.CourseID })
+        </td>
+    </tr>
+}
+
+</table>

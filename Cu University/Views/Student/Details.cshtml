@@ -1,17 +1,17 @@
 ﻿@model Cu_University.Models.Student
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalhes";
 }
 
-<h2>Details</h2>
+<h2>Detalhes</h2>
 
 <div>
-    <h4>Student</h4>
+    <h4>Estudante</h4>
     <hr />
     <dl class="dl-horizontal">
         <dt>
-            @Html.DisplayNameFor(model => model.LastName)
+            Sobrenome
         </dt>
 
         <dd>
@@ -19,7 +19,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.FirstMidName)
+            Nome
         </dt>
 
         <dd>
@@ -27,7 +27,7 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.EnrollmentDate)
+            Data de Inscrição
         </dt>
 
         <dd>
@@ -37,6 +37,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.ID }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Editar", "Edit", new { id = Model.ID }) |
+    @Html.ActionLink("Voltar à Lista", "Index")
 </p>
